@@ -118,18 +118,18 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
-if DEBUG is False:
-    STATICFILES_DIRS = [ BASE_DIR / 'static' ]
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-else:
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static'),
-    ]
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# Use simpler storage for now
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# OR if that still fails, use this:
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 # Cloudinary Configuration for Media Files
 import cloudinary
 import cloudinary.uploader
