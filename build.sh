@@ -4,7 +4,7 @@ set -o errexit
 
 echo "=== Render Build Script Starting ==="
 echo "Current directory: $(pwd)"
-echo "Python version: $(python3 --version)"
+echo "Python version: $(python --version)"
 
 # Set environment variable to indicate deployment
 export RENDER=True
@@ -15,6 +15,8 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 # Ensure required directories exist
+echo "Creating necessary directories..."
+mkdir -p static
 mkdir -p staticfiles
 mkdir -p media
 mkdir -p logs
@@ -24,18 +26,10 @@ touch logs/django.log logs/security.log logs/access.log
 
 # Collect static files
 echo "Collecting static files..."
-python3 manage.py collectstatic --no-input
+python manage.py collectstatic --no-input --clear
 
 # Apply database migrations
 echo "Applying database migrations..."
-python3 manage.py migrate
-
-# Optional: Check Gunicorn installation
-if command -v gunicorn >/dev/null 2>&1; then
-  echo "Gunicorn is installed at $(which gunicorn)"
-else
-  echo "Gunicorn not found, installing..."
-  pip install gunicorn
-fi
+python manage.py migrate --no-input
 
 echo "=== Build completed successfully ==="
