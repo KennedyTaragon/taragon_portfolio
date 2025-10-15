@@ -1,0 +1,716 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "portfolio",
+        "model": "personal"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "portfolio",
+        "model": "about"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "portfolio",
+        "model": "education"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "portfolio",
+        "model": "experience"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "portfolio",
+        "model": "description"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "portfolio",
+        "model": "issuing_organization"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "portfolio",
+        "model": "portfolio"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "portfolio",
+        "model": "technology"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add personal",
+        "content_type": [
+            "portfolio",
+            "personal"
+        ],
+        "codename": "add_personal"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change personal",
+        "content_type": [
+            "portfolio",
+            "personal"
+        ],
+        "codename": "change_personal"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete personal",
+        "content_type": [
+            "portfolio",
+            "personal"
+        ],
+        "codename": "delete_personal"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view personal",
+        "content_type": [
+            "portfolio",
+            "personal"
+        ],
+        "codename": "view_personal"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add about",
+        "content_type": [
+            "portfolio",
+            "about"
+        ],
+        "codename": "add_about"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change about",
+        "content_type": [
+            "portfolio",
+            "about"
+        ],
+        "codename": "change_about"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete about",
+        "content_type": [
+            "portfolio",
+            "about"
+        ],
+        "codename": "delete_about"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view about",
+        "content_type": [
+            "portfolio",
+            "about"
+        ],
+        "codename": "view_about"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add education",
+        "content_type": [
+            "portfolio",
+            "education"
+        ],
+        "codename": "add_education"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change education",
+        "content_type": [
+            "portfolio",
+            "education"
+        ],
+        "codename": "change_education"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete education",
+        "content_type": [
+            "portfolio",
+            "education"
+        ],
+        "codename": "delete_education"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view education",
+        "content_type": [
+            "portfolio",
+            "education"
+        ],
+        "codename": "view_education"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add experience",
+        "content_type": [
+            "portfolio",
+            "experience"
+        ],
+        "codename": "add_experience"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change experience",
+        "content_type": [
+            "portfolio",
+            "experience"
+        ],
+        "codename": "change_experience"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete experience",
+        "content_type": [
+            "portfolio",
+            "experience"
+        ],
+        "codename": "delete_experience"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view experience",
+        "content_type": [
+            "portfolio",
+            "experience"
+        ],
+        "codename": "view_experience"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add description",
+        "content_type": [
+            "portfolio",
+            "description"
+        ],
+        "codename": "add_description"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change description",
+        "content_type": [
+            "portfolio",
+            "description"
+        ],
+        "codename": "change_description"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete description",
+        "content_type": [
+            "portfolio",
+            "description"
+        ],
+        "codename": "delete_description"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view description",
+        "content_type": [
+            "portfolio",
+            "description"
+        ],
+        "codename": "view_description"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add issuing_ organization",
+        "content_type": [
+            "portfolio",
+            "issuing_organization"
+        ],
+        "codename": "add_issuing_organization"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change issuing_ organization",
+        "content_type": [
+            "portfolio",
+            "issuing_organization"
+        ],
+        "codename": "change_issuing_organization"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete issuing_ organization",
+        "content_type": [
+            "portfolio",
+            "issuing_organization"
+        ],
+        "codename": "delete_issuing_organization"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view issuing_ organization",
+        "content_type": [
+            "portfolio",
+            "issuing_organization"
+        ],
+        "codename": "view_issuing_organization"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add portfolio",
+        "content_type": [
+            "portfolio",
+            "portfolio"
+        ],
+        "codename": "add_portfolio"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change portfolio",
+        "content_type": [
+            "portfolio",
+            "portfolio"
+        ],
+        "codename": "change_portfolio"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete portfolio",
+        "content_type": [
+            "portfolio",
+            "portfolio"
+        ],
+        "codename": "delete_portfolio"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view portfolio",
+        "content_type": [
+            "portfolio",
+            "portfolio"
+        ],
+        "codename": "view_portfolio"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add technology",
+        "content_type": [
+            "portfolio",
+            "technology"
+        ],
+        "codename": "add_technology"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change technology",
+        "content_type": [
+            "portfolio",
+            "technology"
+        ],
+        "codename": "change_technology"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete technology",
+        "content_type": [
+            "portfolio",
+            "technology"
+        ],
+        "codename": "delete_technology"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view technology",
+        "content_type": [
+            "portfolio",
+            "technology"
+        ],
+        "codename": "view_technology"
+    }
+}
+]
