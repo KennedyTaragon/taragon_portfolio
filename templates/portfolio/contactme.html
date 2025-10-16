@@ -8,10 +8,10 @@
     <div class="row mt-2">
       <div class="col-md-6 d-flex align-items-stretch">
         <div class="info-box">
-          <i class="fa-solid fa-earth-asia"></i>
+          <i class="fa-solid fa-phone"></i>
           <div class="info">
-            <h3>My Address</h3>
-            <p>{{ personal_info.location }}</p>
+            <h3>Phone Number</h3>
+            <p>{{ personal_info.phone }}</p>
           </div>
         </div>
       </div>
@@ -47,18 +47,17 @@
         </div>
       </div>
       {% endfor %}
-      <div class="col-md-6 mt-4 d-flex align-items-stretch">
-        <div class="info-box">
-          <i class="fa-solid fa-comment"></i>
-          <div class="info">
-            <h3>Let's Connect</h3>
-            <p>
-              Stay connected with me through social media for the latest
-              updates.
-            </p>
+          <div class="col-md-6 mt-4 d-flex align-items-stretch">
+            <div class="info-box">
+              <a href="https://wa.me/254723754676" target="_blank" style="text-decoration: none; color: inherit;">
+                <i class="fa-brands fa-whatsapp" style="font-size: 3.0em; color: #25D366;"></i>
+                <div class="info">
+                  <h3>Let's Connect</h3>
+                  <p>Chat with me on WhatsApp</p>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
     </div>
     <form id="contactme_form" method="post" action="{% url 'home' %}" class="php-email-form mt-4">
       {% csrf_token %}
@@ -79,9 +78,9 @@
       <div class="my-3">
         <div class="loading">Loading</div>
         <div class="error-message"></div>
-          <div class="sent-message">
-                Your message has been sent. Thank you!
-          </div>
+        <div class="sent-message">
+          Your message has been sent. Thank you!
+        </div>
       </div>
       <div class="form-group mt-3 captcha-field">
         {{ contact_form.captcha }}
@@ -92,3 +91,26 @@
     </form>
   </div>
 </section>
+
+<style>
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .info-box {
+    margin-bottom: 1rem;
+  }
+  
+  .social-links a {
+    margin: 0 8px;
+  }
+}
+
+.info-box a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.info-box a i {
+  margin-right: 15px;
+}
+</style>

@@ -7,7 +7,9 @@ class Personal(models.Model):
     role = models.TextField(max_length=500, blank=True, null=True)
     mini_description = models.TextField(max_length=500, blank=True, null=True)
     cv_description = models.TextField(max_length=500, blank=True, null=True)
-    cv_link = models.URLField(blank=True, null=True)
+    #cv_link = models.URLField(blank=True, null=True)
+    cv_link = models.FileField(upload_to='cvs/', blank=True, null=True)
+
     #photo = CloudinaryField('profile_pic/main')
     photo = models.ImageField(upload_to='profile_pics/main', blank=True, null=True)
     github = models.URLField(blank=True, null=True)
