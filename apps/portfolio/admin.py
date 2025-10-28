@@ -1,22 +1,58 @@
 from django.contrib import admin
-from .models import Personal, About, Experience, Description, Technology, Education, Portfolio, Issuing_Organization
+from unfold.admin import ModelAdmin
+from .models import (
+    Personal,
+    About,
+    Experience,
+    Description,
+    Technology,
+    Education,
+    Portfolio,
+    Issuing_Organization,
+)
 
 
-class ExperienceAdmin(admin.ModelAdmin):
-    list_display = ('title', 'company', 'start_date', 'end_date', 'is_current')
-    list_filter = ('is_current',)  # Add a filter for is_current field
-    search_fields = ('title', 'company', 'start_date', 'end_date')  # Add search fields
-    list_editable = ('is_current',)  # Allow editing is_current directly from the list view
-    ordering = ('is_current',)
+@admin.register(Experience)
+class ExperienceAdmin(ModelAdmin):
+    list_display = [field.name for field in Experience._meta.fields]
+    list_filter = ('is_current',)
+    search_fields = ('title', 'company')
+    list_editable = ('is_current',)
+    ordering = ('-start_date',)
 
-class DescriptionAdmin(admin.ModelAdmin):
-    list_display = ('text', 'experience', 'order_number')
 
-admin.site.register(Portfolio)
-admin.site.register(Personal)
-admin.site.register(About)
-admin.site.register(Experience, ExperienceAdmin)
-admin.site.register(Description, DescriptionAdmin)
-admin.site.register(Technology)
-admin.site.register(Education)
-admin.site.register(Issuing_Organization)
+@admin.register(Description)
+class DescriptionAdmin(ModelAdmin):
+    list_display = [field.name for field in Description._meta.fields]
+    ordering = ('experience', 'order_number')
+
+
+@admin.register(Portfolio)
+class PortfolioAdmin(ModelAdmin):
+    list_display = [field.name for field in Portfolio._meta.fields]
+    search_fields = [field.name for field in Portfolio._meta.fields if field.get_internal_type() == 'CharField']
+
+
+@admin.register(Personal)
+class PersonalAdmin(ModelAdmin):
+    list_display = [field.name for field in Personal._meta.fields]
+
+
+@admin.register(About)
+class AboutAdmin(ModelAdmin):
+    list_display = [field.name for field in About._meta.fields]
+
+
+@admin.register(Technology)
+class TechnologyAdmin(ModelAdmin):
+    list_display = [field.name for field in Technology._meta.fields]
+
+
+@admin.register(Education)
+class EducationAdmin(ModelAdmin):
+    list_display = [field.name for field in Education._meta.fields]
+
+
+@admin.register(Issuing_Organization)
+class IssuingOrganizationAdmin(ModelAdmin):
+    list_display = [field.name for field in Issuing_Organization._meta.fields]
